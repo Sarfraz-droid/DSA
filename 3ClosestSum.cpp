@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main() {
 	int n;
 	cin>>n;
@@ -23,7 +22,7 @@ int main() {
     {
         int sum=0;
         int j=i+1,k=n-1;
-
+        
         while(j<k)
         {
 			sum = A[i] + A[j] + A[k];
