@@ -34,13 +34,30 @@ void updateBit(int &n,int i,int v)
 	n = n | mask;
 }
 
+int lastIbits(int n,int i)
+{
+	int mask = -1 << i;
+	return n&mask;
+}
+
+int removebitsinIandJ(int n,int i,int f)
+{
+	int a = -1 << i;
+	int b = (1<<f) -1;
+	int mask = a | b;
+	return n & mask;
+}
+
 int main()
 {
 	int n;
 	cin >> n;
 	int i = 0;
 	cin>>i;
-	updateBit(n,i,1);
+	cout<<lastIbits(n,i)<<endl;
+
+	cout<<removebitsinIandJ(n,4,2)<<endl;
 	cout<<n<<endl;
+
 
 }
